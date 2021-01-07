@@ -12,6 +12,9 @@ main {
   max-width: 100%;
 }
 section {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
   padding: 10px;
 }
 h2 {
@@ -47,9 +50,6 @@ h2 {
 
 /*===== About =====*/
 .about {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr;
   text-align: center;
 }
 .about p {
@@ -67,3 +67,25 @@ button {
 }
 
 /*===== Authors =====*/
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.authors img {
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+}
+.authors span {
+  display: block;
+  text-align: center;
+}
+
+/*===== Popular Books =====*/
+/*===== New Books =====*/
+/*===== Upcoming Releases =====*/
+/*===== Footer =====*/
+/*===== Media Queries =====*/
+
