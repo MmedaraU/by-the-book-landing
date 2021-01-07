@@ -4,12 +4,26 @@
 :root {
   font-size: 16px;
 }
-
+* {
+  box-sizing: border-box;
+}
+main {
+  width:100vw;
+  max-width: 100%;
+}
+section {
+  padding: 10px;
+}
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
 /*===== Banner =====*/
 .banner {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   background: url("/img/banner.jpg");
   background-size: cover;
   background-position: center;
@@ -28,5 +42,28 @@
   width: fit-content;
   padding: 25px;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
+
+/*===== About =====*/
+.about {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+.about p {
+  font-size: 20px;
+}
+button {
+  display: flex;
+  height: 50px;
+  width: 250px;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 25px;
+}
+
+/*===== Authors =====*/
