@@ -38,6 +38,8 @@ section img {
 
 section:nth-of-type(odd) {
   background: #62002d;
+  font-weight: bold;
+  color: #ddd;
 }
 section:nth-of-type(odd) h2{
   color: #ccb5a3;
@@ -62,16 +64,38 @@ button {
   background: inherit;
   border: 2px solid #fff;
   color: #fff;
-  cursor: pointer;
 }
 
 /*===== Typography =====*/
 h2 {
   font-size: 3rem;
   text-align: center;
+  text-decoration: underline;
+  text-decoration-color: inherit;
+  text-decoration-thickness: 2px;
 }
 a {
+  text-decoration: none;
+  color: #fff;
   cursor: pointer;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  font-weight: bold;
+}
+p span {
+  font-weight: normal;
+  font-style: italic;
+}
+.site-name {
+  font-size: 1.5em;
+  color: #62002d;
+  font-weight: bold;
+  display: inline;
+  text-decoration: underline;
 }
 /*===== Header =====*/
 header{
@@ -80,6 +104,7 @@ header{
   background: #666;
   color: #fff;
   justify-content: space-between;
+  font-size: 18px;
 }
 .logo {
   height: 90px;
@@ -93,7 +118,6 @@ header ul {
 header li {
   margin: 10px;
   list-style-type: none;
-  cursor: pointer;
 }
 /*===== Banner =====*/
 .banner {
@@ -144,5 +168,34 @@ span {
 }
 
 /*===== Footer =====*/
-
+footer {
+  background: #62002d;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px;
+}
+footer div {
+  padding: 10px;
+}
+/*footer div:nth-of-type(1) {
+  grid-column: 1 / 2;
+}*/
+footer .logo {
+  display: inline;
+}
+footer p {
+  font-weight: normal;
+  font-size: 1rem;
+  display: inline-block;
+}
+footer li {
+  list-style-type: none;
+}
+footer li a {
+  color: #757575;
+}
+footer svg {
+  height: 1rem;
+  margin: 2px;
+}
 /*===== Media Queries =====*/
