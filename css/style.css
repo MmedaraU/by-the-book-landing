@@ -3,23 +3,97 @@
 /*===== General Styles =====*/
 :root {
   font-size: 16px;
+  color: #757575;
 }
 * {
   box-sizing: border-box;
 }
 main {
+  background: #ccb5a3;
   width:100vw;
   max-width: 100%;
+  font-size: 20px;
 }
 section {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr;
   padding: 10px;
+  text-align: center;
 }
+section img {
+  height: 150px;
+  width: 100px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.row > div {
+  padding: 10px;
+  text-align: center;
+}
+
+section:nth-of-type(odd) {
+  background: #62002d;
+}
+section:nth-of-type(odd) h2{
+  color: #ccb5a3;
+}
+section:nth-of-type(even) h2{
+  color: #62002d;
+
+}
+section:nth-of-type(1) {
+  background: url("/img/banner.jpg");
+}
+
+button {
+  display: flex;
+  height: 50px;
+  width: 250px;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background: inherit;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}
+
+/*===== Typography =====*/
 h2 {
   font-size: 3rem;
   text-align: center;
+}
+a {
+  cursor: pointer;
+}
+/*===== Header =====*/
+header{
+  display: flex;
+  text-transform: uppercase;
+  background: #666;
+  color: #fff;
+  justify-content: space-between;
+}
+.logo {
+  height: 90px;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  opacity: 0.50;
+}
+header li {
+  margin: 10px;
+  list-style-type: none;
+  cursor: pointer;
 }
 /*===== Banner =====*/
 .banner {
@@ -27,7 +101,6 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background: url("/img/banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,51 +114,35 @@ h2 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 60px;
   font-weight: bold;
-  background: palevioletred;
+  background: #62002d;
   width: fit-content;
   padding: 25px;
   color: #fff;
   text-transform: capitalize;
-}
-
-/*===== About =====*/
-.about {
   text-align: center;
-}
-.about p {
-  font-size: 20px;
-}
-button {
-  display: flex;
-  height: 50px;
-  width: 250px;
-  justify-self: center;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  border-radius: 25px;
 }
 
 /*===== Authors =====*/
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .authors img {
   height: 125px;
   width: 125px;
   border-radius: 50%;
 }
-.authors span {
+span {
   display: block;
   text-align: center;
 }
+.authors .row:nth-of-type(2) {
+  justify-content: center;
+  
+}
+.authors .row:nth-of-type(2) div:nth-of-type(1){
+  margin-right: 40px;
+}
+.authors .row:nth-of-type(2) div:nth-of-type(2){
+  margin-left: 40px;
+}
 
-/*===== Popular Books =====*/
-/*===== New Books =====*/
-/*===== Upcoming Releases =====*/
 /*===== Footer =====*/
-/*===== Media Queries =====*/
 
+/*===== Media Queries =====*/
