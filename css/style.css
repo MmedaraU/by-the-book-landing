@@ -12,18 +12,18 @@ main {
   background: #ccb5a3;
   width:100vw;
   max-width: 100%;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 section {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr;
-  padding: 10px;
+  padding: 0.625rem;
   text-align: center;
 }
 section img {
-  height: 150px;
-  width: 100px;
+  height: 9.375rem;
+  width: 6.25rem;
 }
 
 .row {
@@ -32,7 +32,7 @@ section img {
   justify-content: space-between;
 }
 .row > div {
-  padding: 10px;
+  padding: 0.625rem;
   text-align: center;
 }
 
@@ -46,26 +46,29 @@ section:nth-of-type(odd) h2{
 }
 section:nth-of-type(even) h2{
   color: #62002d;
-
 }
 section:nth-of-type(1) {
   background: url("/img/banner.jpg");
 }
 
+/*===== Buttons =====*/
+
 button {
   display: flex;
-  height: 50px;
-  width: 250px;
+  height: 3.125rem;
+  width: 15.625rem;
   justify-self: center;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
   border-radius: 5px;
   background: inherit;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #62002d;
 }
 
+button a {
+  color: #62002d;
+}
 /*===== Typography =====*/
 h2 {
   font-size: 3rem;
@@ -95,7 +98,6 @@ p span {
   color: #62002d;
   font-weight: bold;
   display: inline;
-  text-decoration: underline;
 }
 /*===== Header =====*/
 header{
@@ -104,10 +106,10 @@ header{
   background: #666;
   color: #fff;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .logo {
-  height: 90px;
+  height: 5.625rem;
 }
 
 header ul {
@@ -116,7 +118,7 @@ header ul {
   opacity: 0.50;
 }
 header li {
-  margin: 10px;
+  margin: 0.625rem;
   list-style-type: none;
 }
 /*===== Banner =====*/
@@ -125,7 +127,7 @@ header li {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-size: cover;
+  background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
@@ -136,11 +138,11 @@ header li {
 
 .banner-text {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 60px;
+  font-size: 3.75rem;
   font-weight: bold;
   background: #62002d;
   width: fit-content;
-  padding: 25px;
+  padding: 1.5625rem;
   color: #fff;
   text-transform: capitalize;
   text-align: center;
@@ -148,8 +150,8 @@ header li {
 
 /*===== Authors =====*/
 .authors img {
-  height: 125px;
-  width: 125px;
+  height: 7.8125rem;
+  width: 7.8125rem;
   border-radius: 50%;
 }
 span {
@@ -161,10 +163,10 @@ span {
   
 }
 .authors .row:nth-of-type(2) div:nth-of-type(1){
-  margin-right: 40px;
+  margin-right: 2.5rem;
 }
 .authors .row:nth-of-type(2) div:nth-of-type(2){
-  margin-left: 40px;
+  margin-left: 2.5rem;
 }
 
 /*===== Footer =====*/
@@ -172,14 +174,14 @@ footer {
   background: #62002d;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 200px;
+  grid-template-rows: fit-content;
+  text-align: center;
 }
 footer div {
-  padding: 10px;
+  padding: 0.625rem;
+  height:fit-content;
 }
-/*footer div:nth-of-type(1) {
-  grid-column: 1 / 2;
-}*/
+
 footer .logo {
   display: inline;
 }
@@ -196,6 +198,57 @@ footer li a {
 }
 footer svg {
   height: 1rem;
+  width: 1rem;
   margin: 2px;
 }
+footer svg:hover {
+  fill: #fff;
+}
+.bold-text {
+  font-weight: bold;
+  display: inline;
+}
+
+section {border: 1px solid red;}
 /*===== Media Queries =====*/
+@media screen and (max-width: 887px) {
+  header {
+  width: fit-content;
+  max-width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+.row {
+  flex-direction: column;
+}
+
+  section .row div {
+  width: 100vw;
+  max-width: 100%;
+  display: block;
+  margin: 5px 0 5px 0;
+  }
+
+.authors .row:nth-of-type(2) div:nth-of-type(1){
+  margin-right: 0;
+}
+.authors .row:nth-of-type(2) div:nth-of-type(2){
+  margin-left: 0;
+}
+
+footer {
+  grid-template-columns: 1fr;
+  grid-template-rows: fit-content;
+}
+footer div {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+footer nav {
+  column-count: 2;
+}
+footer li:last-of-type {
+  grid-column: 1 / 2;
+}
+}
